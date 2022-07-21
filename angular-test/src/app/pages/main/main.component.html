@@ -1,0 +1,22 @@
+<a [routerLink]="['/']">Home</a>
+<a [routerLink]="['/menu']">Menu</a>
+<a [routerLink]="['/contact']">Contact</a>
+<div>
+  <h2>Welcome!!This is main page.</h2>
+</div>
+<div>
+  <table border="1" [cellSpacing]="3" [cellPadding]="3">
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Age</th>
+      <th>Address</th>
+    </tr>
+    <tr *ngFor="let human of humanlist">
+      <td>{{human.name}}</td>
+      <td>{{human.gender}}</td>
+      <td>{{human.age}}</td>
+      <td>{{human.address}}</td>
+    </tr>
+  </table>
+</div>

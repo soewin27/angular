@@ -1,0 +1,58 @@
+<p>test works!</p>
+<div *ngIf="true">Display data</div>
+<p>ngIfElse example!</p> 
+<div *ngIf="isLogIn; else isLogOut"> 
+  Hello you are logged in 
+</div>
+<ng-template #isLogOut> 
+  You're logged out.. 
+</ng-template>
+
+
+<h2>ngFor directive</h2> 
+<ul> 
+   <li *ngFor="let l of list">
+      {{l}} 
+  </li>
+</ul>
+<ul> 
+  <li *ngFor="let std of studentArr">
+      {{std.name}} 
+  </li>
+</ul>
+<div appCustomstyle>
+  hello hello
+</div>
+<h2>ngSwitch directive</h2> 
+<ul [ngSwitch]="logInName"> 
+   <li *ngSwitchCase="'user'"> 
+      <p>User is logged in..</p> 
+    </li> 
+   <li *ngSwitchCase="'admin'"> 
+      <p>admin is logged in</p> 
+    </li> 
+   <li *ngSwitchDefault> 
+      <p>Please choose login name</p> 
+    </li> 
+</ul>
+<div ><p [ngStyle]="{'color': 'green', 'font-size': '50px'}">
+  paragraph style is applied using ngStyle
+  </p></div>
+
+  <p appHighlight>Highlight me!</p>
+
+  <h1>Test component</h1>
+  <app-child [userName]="name"></app-child>
+  <app-expense-entry-list></app-expense-entry-list>
+  <div>
+    Today's date :- {{presentDate}}
+    </div>
+    <div>
+      Today's date :- {{presentDate | date }}
+      </div>
+      <div>
+        short date :- {{presentDate | date:'shortDate' }} <br/>
+        Full date :- {{presentDate | date:'fullDate' }} <br/>
+        Formatted date:- {{presentDate | date:'M/dd/yyyy'}} <br/>
+        Hours and minutes:- {{presentDate | date:'h:mm'}}
+        </div>

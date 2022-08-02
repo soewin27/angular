@@ -1,0 +1,11 @@
+<section>
+<mat-selection-list #shoes>
+  <mat-list-option *ngFor="let fruit of fruits">
+    {{fruit}}
+  </mat-list-option>
+</mat-selection-list>
+
+<p>
+  Options selected: {{shoes.selectedOptions.selected.length}}
+</p>
+</section>
